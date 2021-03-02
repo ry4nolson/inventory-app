@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory.Controllers.Controller">
+
+   <children>
+      <VBox GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+         <children>
+            <Label text="Inventory Management System">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <SplitPane dividerPositions="0.5" VBox.vgrow="ALWAYS">
+               <items>
+                  <VBox>
+                     <children>
+                        <Label text="Parts">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField promptText="Search by Part ID or Name">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </TextField>
+                        <TableView VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="TOP_RIGHT" VBox.vgrow="NEVER">
+                           <children>
+                              <Button mnemonicParsing="false" text="Add">
+                                 <HBox.margin>
+                                    <Insets right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Modify">
+                                 <HBox.margin>
+                                    <Insets right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="Delete">
+                                 <HBox.margin>
+                                    <Insets top="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Products">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField promptText="Search by Product ID or Name" />
+                        <TableView VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                         <HBox alignment="TOP_RIGHT" VBox.vgrow="NEVER">
+                             <children>
+                                 <Button mnemonicParsing="false" text="Add">
+                                     <HBox.margin>
+                                         <Insets right="20.0" top="20.0" />
+                                     </HBox.margin>
+                                 </Button>
+                                 <Button mnemonicParsing="false" text="Modify">
+                                     <HBox.margin>
+                                         <Insets right="20.0" top="20.0" />
+                                     </HBox.margin>
+                                 </Button>
+                                 <Button mnemonicParsing="false" text="Delete">
+                                     <HBox.margin>
+                                         <Insets top="20.0" />
+                                     </HBox.margin>
+                                 </Button>
+                             </children>
+                         </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </items>
+            </SplitPane>
+
+             <Button fx:id="btnExit" alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#exit" text="EXIT">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
