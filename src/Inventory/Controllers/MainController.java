@@ -33,7 +33,6 @@ public class MainController {
     private TableView productsTable;
 
     public Inventory inventory;
-    private final Stage stage = new Stage();
 
     public void initialize() {
         System.out.println("initialized");
@@ -49,9 +48,7 @@ public class MainController {
         productsTable.setItems(products);
 
     }
-    public void show(){
-        this.stage.showAndWait();
-    }
+
     /**
      * exits the application
      * @param actionEvent
@@ -65,7 +62,21 @@ public class MainController {
     public void addPart(ActionEvent actionEvent) {
         inventory.addPart(new InHousePart(2, "Test", 1.0,0,1,2, 2));
 
-        PartController part = new PartController();
+        Parent root;
+        try {
+            URL url = getClass().getResource("/Inventory/Views/part.fxml");
+
+            System.out.println(url);
+
+            root = FXMLLoader.load(url);
+            Stage stage = new Stage();
+            stage.setTitle("Add Part");
+            stage.setScene(new Scene(root, 450, 450));
+            stage.show();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void modifyPart(ActionEvent actionEvent) {

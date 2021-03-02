@@ -6,12 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 /**
  * Main! Then entrypoint to the application
  *
  * FUTURE ENHANCEMENTS: implement a simple file based database. I lose all my inventory when I exit the app!!!
  */
 public class Main extends Application {
+
 
     @Override
     public void start(Stage primaryStage) throws Exception{

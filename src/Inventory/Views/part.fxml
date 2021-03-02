@@ -19,12 +19,16 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Label>
-                  <RadioButton mnemonicParsing="false" text="In House">
+
+                  <RadioButton fx:id="inHouse" mnemonicParsing="false" onAction="#showInHouse" text="In House">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="partType" />
+                     </toggleGroup>
                   </RadioButton>
-                  <RadioButton alignment="TOP_RIGHT" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="Oursourced" />
+                  <RadioButton fx:id="outsourced" alignment="TOP_RIGHT" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#showOutsourced" text="Oursourced" toggleGroup="$partType" />
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
@@ -83,7 +87,7 @@
                   <TextField fx:id="partMax" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox fx:id="inHouseVisible" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
                <children>
                   <Label prefWidth="100.0" text="Machine ID">
                      <HBox.margin>
@@ -93,7 +97,7 @@
                   <TextField fx:id="partMachineID" HBox.hgrow="ALWAYS" />
                </children>
             </HBox>
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox fx:id="companyVisible" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Label prefWidth="100.0" text="Company Name">
                      <HBox.margin>
