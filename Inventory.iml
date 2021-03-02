@@ -80,5 +80,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="javafx-swt" level="application" />
+    <orderEntry type="library" exported="" name="lib" level="application" />
   </component>
 </module>
