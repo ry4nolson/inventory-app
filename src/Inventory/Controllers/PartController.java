@@ -8,14 +8,14 @@ import javafx.event.ActionEvent;
 public class PartController {
     /**
      * save Part
-     * @param actionEvent
+     * @param actionEvent the event
      */
     public void save(ActionEvent actionEvent) {
     }
 
     /**
      * cancel editing
-     * @param actionEvent
+     * @param actionEvent the event
      */
     public void cancel(ActionEvent actionEvent) {
     }

@@ -64,6 +64,8 @@ public class MainController {
 
     public void addPart(ActionEvent actionEvent) {
         inventory.addPart(new InHousePart(2, "Test", 1.0,0,1,2, 2));
+
+        PartController part = new PartController();
     }
 
     public void modifyPart(ActionEvent actionEvent) {
