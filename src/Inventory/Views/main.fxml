@@ -2,10 +2,11 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory.Controllers.MainController">
+<GridPane fx:id="grid" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory.Controllers.MainController">
 
    <children>
       <VBox GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
@@ -33,20 +34,30 @@
                               <Insets />
                            </VBox.margin>
                         </TextField>
-                        <TableView VBox.vgrow="ALWAYS">
+                        <TableView fx:id="partsTable" VBox.vgrow="ALWAYS">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                            <TableColumn fx:id="partId" prefWidth="75.0" text="Part Id">
+                                <cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory>
+                            </TableColumn>
+                              <TableColumn fx:id="partName" prefWidth="150.0" text="Part Name">
+                                  <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="partInventory" prefWidth="100.0" text="Inventory Level">
+                                  <cellValueFactory><PropertyValueFactory property="stock" /></cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="partCost" prefWidth="75.0" text="Cost/Unit">
+                                  <cellValueFactory><PropertyValueFactory property="price" /></cellValueFactory>
+                              </TableColumn>
                           </columns>
                         </TableView>
                         <HBox alignment="TOP_RIGHT" VBox.vgrow="NEVER">
                            <children>
-                              <Button mnemonicParsing="false" text="Add">
+                              <Button fx:id="addPart" mnemonicParsing="false" onAction="#addPart" text="Add">
                                  <HBox.margin>
                                     <Insets right="20.0" top="20.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button mnemonicParsing="false" text="Modify">
+                              <Button fx:id="modifyPart" mnemonicParsing="false" onAction="#modifyPart" text="Modify">
                                  <HBox.margin>
                                     <Insets right="20.0" top="20.0" />
                                  </HBox.margin>
@@ -71,10 +82,19 @@
                            </font>
                         </Label>
                         <TextField promptText="Search by Product ID or Name" />
-                        <TableView VBox.vgrow="ALWAYS">
+                        <TableView fx:id="productsTable" VBox.vgrow="ALWAYS">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="Product Id">
+                                  <cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="150.0" text="Product Name">
+                                  <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory></TableColumn>
+                              <TableColumn prefWidth="100.0" text="Inventory Level">
+                                  <cellValueFactory><PropertyValueFactory property="stock" /></cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="100.0" text="Cost/Unit">
+                                  <cellValueFactory><PropertyValueFactory property="price" /></cellValueFactory>
+                              </TableColumn>
                           </columns>
                         </TableView>
                          <HBox alignment="TOP_RIGHT" VBox.vgrow="NEVER">

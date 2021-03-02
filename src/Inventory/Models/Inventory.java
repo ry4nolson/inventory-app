@@ -1,5 +1,6 @@
 package Inventory.Models;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 
@@ -7,8 +8,11 @@ import javafx.collections.transformation.FilteredList;
  * Main Inventory class. Holds lists of parts and products. It also contains methods to interact with those lists.
  */
 public class Inventory {
-    private ObservableList<Part> allParts;
-    private ObservableList<Product> allProducts;
+    private ObservableList<Part> allParts = FXCollections.observableArrayList();
+    private ObservableList<Product> allProducts = FXCollections.observableArrayList();
+
+    public Inventory(){
+    }
 
     public void addPart(Part part){
         this.allParts.add(part);
