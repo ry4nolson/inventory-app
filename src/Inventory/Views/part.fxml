@@ -30,6 +30,9 @@
                   </RadioButton>
                   <RadioButton fx:id="outsourced" alignment="TOP_RIGHT" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#showOutsourced" text="Oursourced" toggleGroup="$partType" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -79,7 +82,7 @@
                      </HBox.margin>
                   </Label>
                   <TextField fx:id="partMin" HBox.hgrow="ALWAYS" />
-                  <Label prefWidth="100.0" text="Max">
+                  <Label text="Max">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
