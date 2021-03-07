@@ -29,7 +29,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField promptText="Search by Part ID or Name">
+                        <TextField onKeyReleased="#searchParts" promptText="Search by Part ID or Name">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>
@@ -62,7 +62,7 @@
                                     <Insets right="20.0" top="20.0" />
                                  </HBox.margin>
                               </Button>
-                              <Button mnemonicParsing="false" text="Delete">
+                              <Button fx:id="deletePart" mnemonicParsing="false" onAction="#deletePart" text="Delete">
                                  <HBox.margin>
                                     <Insets top="20.0" />
                                  </HBox.margin>
@@ -81,7 +81,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <TextField promptText="Search by Product ID or Name" />
+                        <TextField onKeyReleased="#searchProducts" promptText="Search by Product ID or Name" />
                         <TableView fx:id="productsTable" VBox.vgrow="ALWAYS">
                           <columns>
                               <TableColumn prefWidth="75.0" text="Product Id">
@@ -99,17 +99,17 @@
                         </TableView>
                          <HBox alignment="TOP_RIGHT" VBox.vgrow="NEVER">
                              <children>
-                                 <Button mnemonicParsing="false" text="Add">
+                                 <Button fx:id="addProduct" mnemonicParsing="false" onAction="#addProduct" text="Add">
                                      <HBox.margin>
                                          <Insets right="20.0" top="20.0" />
                                      </HBox.margin>
                                  </Button>
-                                 <Button mnemonicParsing="false" text="Modify">
+                                 <Button fx:id="modifyProduct" mnemonicParsing="false" onAction="#modifyProduct" text="Modify">
                                      <HBox.margin>
                                          <Insets right="20.0" top="20.0" />
                                      </HBox.margin>
                                  </Button>
-                                 <Button mnemonicParsing="false" text="Delete">
+                                 <Button fx:id="deleteProduct" mnemonicParsing="false" onAction="#deleteProduct" text="Delete">
                                      <HBox.margin>
                                          <Insets top="20.0" />
                                      </HBox.margin>

@@ -11,7 +11,7 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label prefWidth="100.0" text="Add Part">
+                  <Label fx:id="title" prefWidth="100.0" text="Add Part">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -41,8 +41,11 @@
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="partId" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="partId" disable="true" promptText="Auto Generated" HBox.hgrow="ALWAYS" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -53,6 +56,9 @@
                   </Label>
                   <TextField fx:id="partName" HBox.hgrow="ALWAYS" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -63,6 +69,9 @@
                   </Label>
                   <TextField fx:id="partInventory" HBox.hgrow="ALWAYS" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -73,22 +82,28 @@
                   </Label>
                   <TextField fx:id="partPrice" HBox.hgrow="ALWAYS" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label prefWidth="100.0" text="Min">
+                  <Label minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" text="Min">
                      <HBox.margin>
                         <Insets right="20.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="partMin" HBox.hgrow="ALWAYS" />
-                  <Label text="Max">
+                  <TextField fx:id="partMin" prefHeight="27.0" prefWidth="110.0" HBox.hgrow="ALWAYS" />
+                  <Label prefHeight="17.0" prefWidth="74.0" text="Max">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="partMax" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="partMax" prefHeight="27.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
             </HBox>
             <HBox fx:id="inHouseVisible" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
                <children>
@@ -99,6 +114,9 @@
                   </Label>
                   <TextField fx:id="partMachineID" HBox.hgrow="ALWAYS" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
             </HBox>
             <HBox fx:id="companyVisible" prefHeight="100.0" prefWidth="200.0">
                <children>
